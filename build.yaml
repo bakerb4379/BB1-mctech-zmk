@@ -72,7 +72,6 @@ include:
   #   shield: sofle_left_peripheral nice_oled
   #   cmake-args: -DCONFIG_ZMK_SLEEP=y -DCONFIG_ZMK_IDLE_TIMEOUT=60000
   #   artifact-name: nice_sofle_left_peripheral_oled
----
 
   # ### CORNE START ###
   #   ### nice_view START ###
