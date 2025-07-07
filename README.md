@@ -1,3 +1,10 @@
+<details>
+	
+![current-keymap-sofle](keymap-drawer/sofle.svg)
+	
+If you want to customize this image with shapes/colors/etc. You can see these references:
+[^1] [^2] [^3]
+</details>
 
 <br>
 
