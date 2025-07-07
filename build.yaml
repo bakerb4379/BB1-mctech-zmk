@@ -52,7 +52,6 @@
 #
 # cmake-args: -DKEYMAP_FILE=../../config/other-corne.keymap -DCONFIG_ZMK_KEYBOARD_NAME=\"other-corne\" -DEXTRA_CONF_FILE=../../config/other-corne.conf
 ---
-
 include:
 
   ### SOFLEV2 SOFLEV1 SOFLEPLUS START ###
@@ -73,7 +72,6 @@ include:
   #   shield: sofle_left_peripheral nice_oled
   #   cmake-args: -DCONFIG_ZMK_SLEEP=y -DCONFIG_ZMK_IDLE_TIMEOUT=60000
   #   artifact-name: nice_sofle_left_peripheral_oled
-
 ---
 
   # ### CORNE START ###
