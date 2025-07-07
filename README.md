@@ -1,4 +1,5 @@
-<details>
+Current layout, Sofle RGB: 
+<details> (updates automatically)
 	
 ![current-keymap-sofle](keymap-drawer/sofle.svg)
 	
