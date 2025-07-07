@@ -52,7 +52,29 @@
 #
 # cmake-args: -DKEYMAP_FILE=../../config/other-corne.keymap -DCONFIG_ZMK_KEYBOARD_NAME=\"other-corne\" -DEXTRA_CONF_FILE=../../config/other-corne.conf
 ---
+
 include:
+
+  ### SOFLEV2 SOFLEV1 SOFLEPLUS START ###
+  # nice!oled sofle
+  - board: nice_nano_v2
+    shield: sofle_left nice_oled
+    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"Sofle_Oled\"  -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_SLEEP=y -DCONFIG_ZMK_IDLE_TIMEOUT=60000
+    artifact-name: nice_sofle_left_oled
+    snippet: studio-rpc-usb-uart
+    
+  - board: nice_nano_v2
+    shield: sofle_right nice_oled
+    cmake-args: -DCONFIG_ZMK_SLEEP=y -DCONFIG_ZMK_IDLE_TIMEOUT=60000
+    artifact-name: nice_sofle_right_oled
+
+  # # peripheral_left, for dongle use
+  # - board: nice_nano_v2
+  #   shield: sofle_left_peripheral nice_oled
+  #   cmake-args: -DCONFIG_ZMK_SLEEP=y -DCONFIG_ZMK_IDLE_TIMEOUT=60000
+  #   artifact-name: nice_sofle_left_peripheral_oled
+
+---
 
   # ### CORNE START ###
   #   ### nice_view START ###
@@ -177,24 +199,6 @@ include:
   #   ### Pro Micro END ###
   # ### CORNE END ###
 
-  ### SOFLEV2 SOFLEV1 SOFLEPLUS START ###
-  # nice!oled sofle
-  - board: nice_nano_v2
-    shield: sofle_left nice_oled
-    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"Sofle_Oled\"  -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_SLEEP=y -DCONFIG_ZMK_IDLE_TIMEOUT=60000
-    artifact-name: nice_sofle_left_oled
-    snippet: studio-rpc-usb-uart
-    
-  - board: nice_nano_v2
-    shield: sofle_right nice_oled
-    cmake-args: -DCONFIG_ZMK_SLEEP=y -DCONFIG_ZMK_IDLE_TIMEOUT=60000
-    artifact-name: nice_sofle_right_oled
-
-  # # peripheral_left, for dongle use
-  # - board: nice_nano_v2
-  #   shield: sofle_left_peripheral nice_oled
-  #   cmake-args: -DCONFIG_ZMK_SLEEP=y -DCONFIG_ZMK_IDLE_TIMEOUT=60000
-  #   artifact-name: nice_sofle_left_peripheral_oled
 
   # # Xiao_Dongle
   # - board: seeeduino_xiao_ble
