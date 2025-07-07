@@ -85,7 +85,7 @@ layers:
   - {t: ▽, type: trans}
   - Page Up
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ↑
   - {t: ▽, type: trans}
   - '0'
   - {t: ▽, type: trans}
@@ -95,9 +95,9 @@ layers:
   - $$mdi:apple-keyboard-shift$$
   - {t: ▽, type: trans}
   - CLCK
-  - ←
+  - PAGE DOWN
   - ↓
-  - ↑
+  - ↓
   - →
   - ⌦
   - $$mdi:backspace-outline$$
