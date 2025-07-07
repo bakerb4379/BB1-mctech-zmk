@@ -34,6 +34,7 @@ a modification to your keymap, you can do it with the online [keymap-editor](htt
 
 # INTRO
 
+<details>
 
 Tested with **[puchi_ble_v1]** (used as a dongle and as
 peripherals), **[nice_nano_v2]** (used as a dongle and as peripherals),
@@ -65,6 +66,7 @@ peripherals), **[nice_nano_v2]** (used as a dongle and as peripherals),
 | support for puchi-ble dongle, nice!nano v2, nice!nano v2 clones, seeeduino xiao ble and more... |
 | support with dongle with display 128x32, 128x64 and 128x128                                     |
 | and more...                                                                                     |
+</details>
 
 # QUICK START
 > [!NOTE]
