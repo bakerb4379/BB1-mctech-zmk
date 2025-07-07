@@ -127,8 +127,10 @@ Here you can see the visual changes to the configuration:
 
 ## keymap sofle
 <details>
-	[![keymap-drawer-demo-sofle](keymap-drawer/sofle.svg)]
-	If you want to customize this image with shapes/colors/etc. You can see these references:
+	
+![current-keymap-sofle](keymap-drawer/sofle.svg)
+	
+If you want to customize this image with shapes/colors/etc. You can see these references:
 [^1] [^2] [^3]
 </details>
 
