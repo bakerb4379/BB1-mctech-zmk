@@ -1,23 +1,18 @@
-# MC Technology's zmk-config for corne - sofle - lily58
+Current layout, Sofle RGB: 
+<details> (updates automatically)
+	
+![current-keymap-sofle](keymap-drawer/sofle.svg)
+	
+If you want to customize this image with shapes/colors/etc. You can see these references:
+[^1] [^2] [^3]
+</details>
 
-[![MC Technology](https://github.com/mctechnology17/mctechnology17/blob/main/src/mctechnology_extendido.GIF)](https://www.youtube.com/channel/UC_mYh5PYPHBJ5YYUj8AIkcw)
-
-<div align="center">
-
-  [<img align="center" alt="MC Technology | YouTube" width="22px" src="https://github.com/mctechnology17/mctechnology17/blob/main/src/youtube.png" />][youtube]
-  [<img align="center" alt="MC Technology17 | Facebook" width="22px" src="https://github.com/mctechnology17/mctechnology17/blob/main/src/facebook.png" />][facebook]
-  [<img align="center" alt="MC Technology17 | Reddit" width="22px" src="https://github.com/mctechnology17/mctechnology17/blob/main/src/reddit.png" />][reddit]
-
-</div>
 <br>
 
 
 - [INTRO](#INTRO)
 - [QUICK START](#QUICK-START)
-  - [keymap corne](#keymap-corne)
   - [keymap sofle](#keymap-sofle)
-  - [keymap splitkb_aurora_sofle](#keymap-splitkb_aurora_sofle)
-  - [keymap lily58](#keymap-lily58)
 - [LOCAL INSTALLATION](#LOCAL-INSTALLATION)
 - [DISPLAY](#DISPLAY)
 - [RGB](#RGB)
@@ -47,32 +42,7 @@ a modification to your keymap, you can do it with the online [keymap-editor](htt
 
 # INTRO
 
-> [!CAUTION]
->
-> I AM NOT RESPONSIBLE FOR ANY DAMAGE THIS CODE MAY CAUSE, USE IT AT YOUR OWN
-> RISK.
-
-> [!NOTE]
->
->
-> FEEL FREE TO MODIFY THE CODE TO YOUR LIKING OR USE WHATEVER YOU NEED. I
-> DECIDED TO REVOKE MANY CHANGES AND RETURN TO THE BASE MAPPING, SO THAT
-> ADVANCED AND NON-ADVANCED  USERS CAN USE THIS REPOSITORY AS A BASE FOR THEIR
-> CONFIGURATIONS. IF YOU HAVE ANY QUESTIONS, DON'T HESITATE TO ASK. IF YOU HAVE
-> ANY SUGGESTIONS, FEEL FREE TO SUGGEST.
-
-
-The objective of this repository is to serve as a base for configuring your
-corne - sofle - lily58 keyboard with the firmware [ZMK firmware] in a simple and fast way.
-without having to configure everything from scratch. Many of us are fascinated
-by customizing our keyboards, but sometimes we don't have the time or
-experience to do it. That is why I have decided to create this repository so
-that you can have a base configuration and you can modify it to your liking.
-
-This base includes the most recent corne - sofle - lily58 configurations, featuring a setup for
-the corne - sofle - lily58 dongle with/without an OLED screen.
-You can also use your keyboard WITH / WITHOUT a dongle of course. with any of the
-plates or screens you have.
+<details>
 
 Tested with **[puchi_ble_v1]** (used as a dongle and as
 peripherals), **[nice_nano_v2]** (used as a dongle and as peripherals),
@@ -104,6 +74,7 @@ peripherals), **[nice_nano_v2]** (used as a dongle and as peripherals),
 | support for puchi-ble dongle, nice!nano v2, nice!nano v2 clones, seeeduino xiao ble and more... |
 | support with dongle with display 128x32, 128x64 and 128x128                                     |
 | and more...                                                                                     |
+</details>
 
 # QUICK START
 > [!NOTE]
@@ -164,20 +135,24 @@ Here you can see the visual changes to the configuration:
 > [config](./config/config_keymap-drawer.yaml).
 > The file for the workflows is in [workflows](./.github/workflows/keymap-drawer.yaml) in case you want to modify it.
 
-## keymap corne
-[![keymap-drawer-demo-corne](keymap-drawer/corne.svg)](https://www.youtube.com/c/mctechnology17)
 ## keymap sofle
-[![keymap-drawer-demo-sofle](keymap-drawer/sofle.svg)](https://www.youtube.com/c/mctechnology17)
-## keymap splitkb_aurora_sofle
-[![keymap-drawer-demo-splitkb_aurora_sofle](keymap-drawer/splitkb_aurora_sofle.svg)](https://www.youtube.com/c/mctechnology17)
-## keymap lily58
-[![keymap-drawer-demo-lily58](keymap-drawer/lily58.svg)](https://www.youtube.com/c/mctechnology17)
-
+<details>
+	
+![current-keymap-sofle](keymap-drawer/sofle.svg)
+	
 If you want to customize this image with shapes/colors/etc. You can see these references:
 [^1] [^2] [^3]
+</details>
 
 
-# LOCAL INSTALLATION
+
+
+
+#  LOCAL INSTALLATION 
+<details>
+	
+LOCAL INSTALLATION
+
 Before making any modifications, please see the [ZMK documentation]
 documentation.
 
@@ -258,6 +233,8 @@ To compile with make, just run the following command:
 make codebase_urob # clones urob's zmk firmware and initializes it
 make corne_urob # compile all the *.uf2 of the corne and copy them to the firmware folder
 ```
+</details>
+
 
 # DISPLAY
 1. ePAPER
