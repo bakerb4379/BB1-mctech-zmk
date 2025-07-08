@@ -10,6 +10,7 @@ sketchybar/dotfiles/*
 .DS_Store
 vim-tools_notiz.vim
 .DS_Store
+.DS_Store.*
 ./*/.DS_Store
 .vscode
 # .vimspector.json

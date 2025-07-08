@@ -2,29 +2,29 @@
 
 <details> 
 
-```
 hardware: 
 
-Sofle RGB (v2.1) 
-nice!nano v2
-[ec11 rotary encoders](https://customkbd.com/collections/other-components/products/rotary-encoder-ec11)
-128X32 OLED display
-external LiPo batts per side
-RGB underglow 
+- Sofle RGB (v2.1) 
+- nice!nano v2 (Nordic nRF52840)
+- [ec11 rotary encoders](https://customkbd.com/collections/other-components/products/rotary-encoder-ec11)
+- 128X32 OLED display
+- external LiPo batts per side
+- 6x RGB underglow LEDs  ... WS2812 family? 
 
-[vendor](https://customkbd.com/collections/sofle/products/sofle-keyboard-rgb-assembled)
-```
+- [vendor](https://customkbd.com/collections/sofle/products/sofle-keyboard-rgb-assembled)
 
-```
+
+
 software
 
-ZMK studio
-mctech ZMK fork https://github.com/mctechnology17/zmk-config
-mctech nice_oled 
+- ZMK studio
+- mctech ZMK fork https://github.com/mctechnology17/zmk-config
+- mctech nice_oled 
 
-```
 
 </details>
+
+<!---------------break---------------->
 
 ### quick links
 
@@ -32,11 +32,22 @@ mctech nice_oled
 - [keymap-editor](https://nickcoutsos.github.io/keymap-editor/).
 - [**nice_oled**](https://github.com/mctechnology17/zmk-nice-oled) repo
 
+<!---------------break---------------->
+
 ### to do 
 
+<details>
+
 RBG
-- https://zmk.dev/docs/features/lighting
-- led_strip function??
+
+1. Add RGB underglow support 
+- see ZMK [doc](https://zmk.dev/docs/development/hardware-integration/lighting/underglow#nrf52-based-boards)
+- properly define led_strip function within [n!n.overlay](boards\nice_nano_v2.overlay) 
+- edit [n!n.overlay](boards\nice_nano_v2.overlay) RGB pin? currently set to p0.06, which is the battery GND?
+- ``` psels = <NRF_PSEL(SPIM_MOSI, 0, 6)>; ```
+
+2. Configure RGB underglow settings 
+- see ZMK [doc](https://zmk.dev/docs/config/lighting#rgb-underglow)
 - disable nice-view compile (inside n!n.overlay?)
 
 OLED 
@@ -46,9 +57,16 @@ OLED
 
 Hardware
 - acrylic OLED covers? 
+  - standoffs 
+  - m2 (torx) screws
+  - countersunk screw holes? for flush hardware
 - figure out LED hardware (sk6812mini? ws2912b? [...](https://customkbd.com/collections/diodes-and-leds)) 
 - thinner batts 
--- proper standoff height
+  - proper standoff height
+
+<!---------------break---------------->
+
+</details>
 
 ### CURRENT KEYMAP (Sofle RGB): 
 <details>
@@ -62,8 +80,10 @@ To customize, see these references:
 </details>
 
 
+<!---------------break---------------->
 
-### OLED SETTINGS (add to [sofle.conf](config/sofle.conf))
+
+### OLED SETTINGS (add to [sofle.conf](config/sofle.conf)? n!n.overlay?? unsure)
 
 <details> 
 
@@ -113,6 +133,8 @@ CONFIG_NICE_OLED_WIDGET_HID_INDICATORS_LUNA_ONLY_CAPSLOCK=y
 
 </details>
 
+<!---------------break---------------->
+
 ----
 
 ## (old) Contents
@@ -143,6 +165,8 @@ CONFIG_NICE_OLED_WIDGET_HID_INDICATORS_LUNA_ONLY_CAPSLOCK=y
 </details>
 
 
+
+<!---------------break---------------->
 
 
 # Install
@@ -213,6 +237,9 @@ Here you can see the visual changes to the configuration:
 	
 If you want to customize this image with shapes/colors/etc. You can see these references:
 [^1] [^2] [^3]
+
+
+<!---------------break---------------->
 
 
 #  LOCAL INSTALLATION 
@@ -304,6 +331,8 @@ make corne_urob # compile all the *.uf2 of the corne and copy them to the firmwa
 
 </details>
 
+<!---------------break---------------->
+
 
 # DISPLAY
 1. ePAPER
@@ -378,6 +407,8 @@ You just have to modify the following line:
 
 </details>
 
+<!---------------break---------------->
+
 # RGB
 
 If you are interested in using RGB on your keyboard you can see the
@@ -387,6 +418,8 @@ from this same repository.
 
 Here is an example of what it looks like:
 [![rgb-demo](src/demo.GIF)](https://www.youtube.com/c/mctechnology17)
+
+<!---------------break---------------->
 
 
 # USEFUL TIPS
@@ -402,6 +435,8 @@ Here is an example of what it looks like:
 - ~You can add a reset key on each half, that's useful for when your halves disconnect/desynchronize, or something unusual happens. That way the firmware is loaded again. see reference in [corne.keymap](./config/corne.keymap)~
 - ~You can add a bootloader activator on each half in case you don't have access to the bootloader button, it is useful in case your case is not optimized or you just want that option. see reference in [corne.keymap](./config/corne.keymap)~
 - ~You can combine the boards, for example: on the left you can have a [nice_nano_v2], on the right a [puchi_ble_v1] and on the dongle a [seeeduino_xiao_ble] or some clone [nice_nano_v2], or any combination you can think of.~
+
+<!---------------break---------------->
 
 # ZMK STUDIO
 
@@ -427,6 +462,8 @@ the need to configure anything else. You just have to follow the steps below:
 >    it is useful to have a toggle key to switch between BLE and USB. (this is
 >    what I understood, if not, please correct me)
 
+<!---------------break---------------->
+
 Useful links:
 - [ZMK Studio Web](https://zmk.studio/)
 - [ZMK Studio Unlock Behavior](https://zmk.dev/docs/keymaps/behaviors/studio-unlock/)
@@ -434,6 +471,8 @@ Useful links:
 	* [Set up ZMK Studio](https://zmk.dev/docs/development/hardware-integration/studio-setup) for your device, if needed.
 	* [Build with ZMK Studio enabled](https://zmk.dev/docs/features/studio) and flash to the device.
 	* Test ZMK Studio by loading https://zmk.studio/ or installing the app from the latest release at https://github.com/zmkfirmware/zmk-studio/releases/
+
+<!---------------break---------------->
 
 ### Reporting
 
@@ -481,6 +520,8 @@ Additional features are provided by the following [modules](https://zmk.dev/docs
 - [**zmk-nice-view-hid**](https://github.com/zzeneg/zmk-nice-view-hid) - Custom nice!view widget that adds time, layout and volume information. This data is received from host computer with companion app over HID interface (aka Raw HID from QMK).
 - [**zmk-hid-host**](https://github.com/zzeneg/qmk-hid-host) - HID host - Custom nice!view widget that adds time, layout and volume information. This data is received from host computer with companion app over HID interface (aka Raw HID from QMK).
 
+<!---------------break---------------->
+
 # THIS REPOSITORY AS A MODULE
 1. In the `config/west.yml` file, add a new remote and its related project.
 ```yaml
@@ -524,6 +565,8 @@ include:
 
 <details>
 	
+<!---------------break---------------->
+
 # INSPIRATIONS
 
 - [englmaxi/zmk-config](https://github.com/englmaxi/zmk-config)
@@ -576,17 +619,8 @@ of both batteries.
 In this animation you can see the actions of the modifier keys, such as
 control, shift, alt, windows/mac, etc.
 
-# DONGLE DESIGNS
-- [case1](https://github.com/englmaxi/zmk-dongle-display/raw/main/cases/case1.zip) by @englmaxi
-- [case2](https://github.com/englmaxi/zmk-dongle-display/raw/main/cases/case2.zip) by @englmaxi
-- [Cyberdeck](https://github.com/rafaelromao/keyboards/tree/main/stls/Dongle) by @rafaelromao
-- [Dongle PCB](https://github.com/spe2/zmk_dongle_hardware) by @spe2
-- [Macintosh](https://makerworld.com/en/models/403660) by @rain2813
-- [Redox](https://makerworld.com/en/models/242951) by @rurounikexin
-- [ZMK Display Dongle](https://makerworld.com/en/models/496738) by @yingeling
+<!---------------break---------------->
 
-An example of Dongle Designs (by @rain2813):
-[![dongle-designs-demo](src/macintosh.png)](https://www.youtube.com/c/mctechnology17)
 
 # TODO
 - [ ] Add more features to the repository
@@ -601,34 +635,24 @@ An example of Dongle Designs (by @rain2813):
 </details>
 
 
-[qmk-config]: https://github.com/mctechnology17/qmk-config
-[qmk_userspace]: https://github.com/mctechnology17/qmk_userspace
-[github]: https://github.com/mctechnology17
-[twitter]: https://twitter.com/mctechnology17
-[youtube]: https://www.youtube.com/c/mctechnology17
-[instagram]: https://www.instagram.com/mctechnology17/
-[facebook]: https://m.facebook.com/mctechnology17/
-[reddit]: https://www.reddit.com/user/mctechnology17
-[nice-view]: https://nicekeyboards.com/nice-view
-[puchi_ble_v1]: (https://keycapsss.com/keyboard-parts/mcu-controller/202/puchi-ble-wireless-microcontroller-pro-micro-replacement?number=KC10157_SWITCH&c=18)
-[seeeduino_xiao_ble]: (https://keycapsss.com/keyboard-parts/mcu-controller/212/seeed-studio-xiao-nrf52840-rp2040-esp32c3?number=KC10167_NRF)
-[nice_nano_v2]: (https://nicekeyboards.com/nice-nano)
-[keymap-editor]: https://nickcoutsos.github.io/keymap-editor/
-[ZMK firmware]: https://github.com/zmkfirmware/zmk/
-[ZMK documentation]: https://zmk.dev/docs/user-setup
-[ZMK keycodes]: https://zmk.dev/docs/codes
-[ZMK Discord]: https://zmk.dev/community/discord/invite
-[git]: (https://github.com/git-guides/install-git)
+<!---------------break---------------->
 
-[vim-executor]: https://github.com/mctechnology17/vim-executor
-[vim-better-header]: https://github.com/mctechnology17/vim-better-header
+
+
+[github]: https://github.com/mctechnology17
 [gm]: https://github.com/mctechnology17/gm
-[vimtools]: https://github.com/mctechnology17/vimtools
-[jailbreakrepo]: https://mctechnology17.github.io/
-[uiglitch]: https://repo.packix.com/package/com.mctechnology.uiglitch/
-[uiswitches]: https://repo.packix.com/package/com.mctechnology.uiswitches/
-[uibadge]: https://repo.packix.com/package/com.mctechnology.uibadge/
-[youtuberepo]: https://github.com/mctechnology17/youtube_repo_mc_technology
-[sponsor]: https://github.com/sponsors/mctechnology17
+[keymap-editor]: https://nickcoutsos.github.io/keymap-editor/
+[nice_nano_v2]: (https://nicekeyboards.com/nice-nano)
+[nice-view]: https://nicekeyboards.com/nice-view
 [paypal]: https://www.paypal.me/mctechnology17
-[readline]: https://github.com/PowerShell/PSReadLine/blob/master/README.md
+[puchi_ble_v1]: (https://keycapsss.com/keyboard-parts/mcu-controller/202/puchi-ble-wireless-microcontroller-pro-micro-replacement?number=KC10157_SWITCH&c=18)
+[qmk_userspace]: https://github.com/mctechnology17/qmk_userspace
+[qmk-config]: https://github.com/mctechnology17/qmk-config
+[seeeduino_xiao_ble]: (https://keycapsss.com/keyboard-parts/mcu-controller/212/seeed-studio-xiao-nrf52840-rp2040-esp32c3?number=KC10167_NRF)
+[sponsor]: https://github.com/sponsors/mctechnology17
+[vim-better-header]: https://github.com/mctechnology17/vim-better-header
+[vim-executor]: https://github.com/mctechnology17/vim-executor
+[vimtools]: https://github.com/mctechnology17/vimtools
+[youtube]: https://www.youtube.com/c/mctechnology17
+[ZMK Discord]: https://zmk.dev/community/discord/invite
+[ZMK documentation]: https://zmk.dev/docs/user-setup
