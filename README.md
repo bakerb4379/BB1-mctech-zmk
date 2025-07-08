@@ -23,12 +23,10 @@ If you want to customize this image with shapes/colors/etc. You can see these re
 <details> 
 
 ```
-=y/n
-
-CONFIG_NICE_OLED_POKEMON_ANIMATION=
-CONFIG_NICE_OLED_VIM=
-CONFIG_NICE_OLED_VIP_MARCOS=
-CONFIG_NICE_OLED_WIDGET_PERIPHERAL_TEST=
+CONFIG_NICE_OLED_POKEMON_ANIMATION=y/n
+CONFIG_NICE_OLED_VIM=y/n
+CONFIG_NICE_OLED_VIP_MARCOS=y/n
+CONFIG_NICE_OLED_WIDGET_PERIPHERAL_TEST=y/n
 ```
 
 see [nice!oled.defconfig](https://github.com/mctechnology17/zmk-nice-oled/blob/5d7dce25735277dd6dcd8295c64e143d4f95cdfa/boards/shields/nice_oled/Kconfig.defconfig)
