@@ -1,3 +1,31 @@
+# Custom ZMK repo for Sofle RGB + n!n2
+
+<details> 
+
+```
+hardware: 
+
+Sofle RGB (v2.1) 
+nice!nano v2
+[ec11 rotary encoders](https://customkbd.com/collections/other-components/products/rotary-encoder-ec11)
+128X32 OLED display
+external LiPo batts per side
+RGB underglow 
+
+[vendor](https://customkbd.com/collections/sofle/products/sofle-keyboard-rgb-assembled)
+```
+
+```
+software
+
+ZMK studio
+mctech ZMK fork https://github.com/mctechnology17/zmk-config
+mctech nice_oled 
+
+```
+
+</details>
+
 ### quick links
 
 - [ZMK-STUDIO](https://zmk.studio/).
@@ -6,8 +34,21 @@
 
 ### to do 
 
+RBG
 - https://zmk.dev/docs/features/lighting
 - led_strip function??
+- disable nice-view compile (inside n!n.overlay?)
+
+OLED 
+- custom animation? 
+- increase gem fps (9600 = 10fps > 9600/10 *24 = 3840 == 24fps??)
+- resize pokemon animation?
+
+Hardware
+- acrylic OLED covers? 
+- figure out LED hardware (sk6812mini? ws2912b? [...](https://customkbd.com/collections/diodes-and-leds)) 
+- thinner batts 
+-- proper standoff height
 
 ### CURRENT KEYMAP (Sofle RGB): 
 <details>
@@ -15,9 +56,8 @@
 <sub>(updates automatically)</sub>
 
 	
-![current-keymap-sofle](keymap-drawer/sofle.svg)
-	
-If you want to customize this image with shapes/colors/etc. You can see these references:
+![current-sofle.keymap](keymap-drawer/sofle.svg)
+To customize, see these references:
 [^1] [^2] [^3]
 </details>
 
@@ -26,6 +66,8 @@ If you want to customize this image with shapes/colors/etc. You can see these re
 ### OLED SETTINGS (add to [sofle.conf](config/sofle.conf))
 
 <details> 
+
+hidden animations (not sized for 128X32 OLED)
 
 ```
 CONFIG_NICE_OLED_POKEMON_ANIMATION=y/n
