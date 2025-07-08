@@ -1,6 +1,7 @@
 
- [ZMK-STUDIO](https://zmk.studio/).\
- [keymap-editor](https://nickcoutsos.github.io/keymap-editor/).
+- [ZMK-STUDIO](https://zmk.studio/).\
+- [keymap-editor](https://nickcoutsos.github.io/keymap-editor/).
+- [**nice_oled**](https://github.com/mctechnology17/zmk-nice-oled) repo
 
 
 ### Current layout (Sofle RGB): 
@@ -11,6 +12,8 @@
 If you want to customize this image with shapes/colors/etc. You can see these references:
 [^1] [^2] [^3]
 </details>
+
+----
 
 
 <details>
@@ -38,7 +41,7 @@ If you want to customize this image with shapes/colors/etc. You can see these re
 
 </details>
 
-----
+
 
 
 # Install
