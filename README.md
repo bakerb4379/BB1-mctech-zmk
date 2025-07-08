@@ -1,5 +1,19 @@
-Current layout, Sofle RGB: 
-<details> (updates automatically)
+### quick links
+
+- [ZMK-STUDIO](https://zmk.studio/).
+- [keymap-editor](https://nickcoutsos.github.io/keymap-editor/).
+- [**nice_oled**](https://github.com/mctechnology17/zmk-nice-oled) repo
+
+### to do 
+
+- https://zmk.dev/docs/features/lighting
+- led_strip function??
+
+### CURRENT KEYMAP (Sofle RGB): 
+<details>
+	
+<sub>(updates automatically)</sub>
+
 	
 ![current-keymap-sofle](keymap-drawer/sofle.svg)
 	
@@ -7,7 +21,61 @@ If you want to customize this image with shapes/colors/etc. You can see these re
 [^1] [^2] [^3]
 </details>
 
-<br>
+
+
+### OLED SETTINGS (add to [sofle.conf](config/sofle.conf))
+
+<details> 
+
+```
+CONFIG_NICE_OLED_POKEMON_ANIMATION=y/n
+CONFIG_NICE_OLED_VIM=y/n
+CONFIG_NICE_OLED_VIP_MARCOS=y/n
+CONFIG_NICE_OLED_WIDGET_PERIPHERAL_TEST=y/n
+```
+
+see [nice!oled.defconfig](https://github.com/mctechnology17/zmk-nice-oled/blob/5d7dce25735277dd6dcd8295c64e143d4f95cdfa/boards/shields/nice_oled/Kconfig.defconfig)
+	
+| Option                                                           | Type | Description                                                                                                                                                                                                                                                       | Default |
+| ------------------------------------------                       | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| `CONFIG_NICE_OLED_GRAPH_AND_NEEDLE_WPM_FIXED_RANGE`                 | bool | This shield uses a fixed range for the chart and gauge deflection. If you set this option to `n`, it will switch to a dynamic range, like the default nice!view shield, which dynamically adjusts based on the last 10 WPM values provided by ZMK.                | y       |
+| `CONFIG_NICE_OLED_GRAPH_AND_NEEDLE_WPM_FIXED_RANGE_MAX`             | int  | You can adjust the maximum value of the fixed range to align with your current goal.                                                                                                                                                                              | 100     |
+| `CONFIG_NICE_OLED_GEM_ANIMATION`                                 | bool | If you find the animation distracting (or want to save on battery usage), you can turn it off by setting this option to `n`. It will instead pick a random frame of the animation every time you restart your keyboard.                                           | y       |
+| `CONFIG_NICE_OLED_GEM_ANIMATION_MS`                              | int  | Alternatively, you can slow down the animation. A high value, such as 96000, slows the animation considerably, showing the next frame every couple of seconds. The animation consists of 16 frames, and the default value of 960 milliseconds plays it at 60 fps. | 960     |
+| `CONFIG_NICE_OLED_WIDGET_WPM`                                    | bool | Enables the Words Per Minute (WPM) widget on the OLED display.                                                                                                                                                                                                    | y       |
+| `CONFIG_NICE_OLED_WIDGET_WPM_LUNA`                               | bool | Activates the Luna animation for the WPM widget.                                                                                                                                                                                                                  | y       |
+| `CONFIG_NICE_OLED_WIDGET_WPM_LUNA_ANIMATION_MS`                  | int  | Sets the duration of the Luna animation for the WPM widget (in milliseconds).                                                                                                                                                                                     | 300     |
+| `CONFIG_NICE_OLED_WIDGET_HID_INDICATORS`                         | bool | Enables the Human Interface Device (HID) indicators widget.                                                                                                                                                                                                       | y       |
+| `CONFIG_NICE_OLED_WIDGET_HID_INDICATORS_LUNA`                    | bool | Activates the Luna animation for the HID indicators widget.                                                                                                                                                                                                       | y       |
+| `CONFIG_NICE_OLED_WIDGET_HID_INDICATORS_LUNA_ONLY_CAPSLOCK`      | bool | Activates the Luna animation for the HID indicators widget [ONLY for CapsLock ](https://zmk.dev/docs/keymaps/list-of-keycodes#locks)                                                                                                                  | n       |
+| `CONFIG_NICE_OLED_WIDGET_HID_INDICATORS_LUNA_ANIMATION_MS`       | int  | Sets the duration of the Luna animation for the HID indicators widget (in milliseconds).                                                                                                                                                                          | 300     |
+| `CONFIG_NICE_OLED_WIDGET_MODIFIERS_INDICATORS`                   | bool | Enables the modifiers indicators widget, which shows active modifier keys.                                                                                                                                                                                        | y       |
+| `CONFIG_NICE_OLED_WIDGET_MODIFIERS_INDICATORS_LUNA`              | bool | Activates the Luna animation for the modifiers indicators widget.                                                                                                                                                                                                 | y       |
+| `CONFIG_NICE_OLED_WIDGET_MODIFIERS_INDICATORS_LUNA_ANIMATION_MS` | int  | Sets the duration of the Luna animation for the modifiers indicators widget (in milliseconds).                                                                                                                                                                    | 300     |
+
+
+You can deactivate luna the dog as follows (default is activated):
+```conf
+CONFIG_NICE_OLED_WIDGET_WPM=n
+CONFIG_NICE_OLED_WIDGET_WPM_LUNA=n
+CONFIG_NICE_OLED_WIDGET_HID_INDICATORS=n
+CONFIG_NICE_OLED_WIDGET_HID_INDICATORS_LUNA=n
+CONFIG_NICE_OLED_WIDGET_MODIFIERS_INDICATORS=n
+CONFIG_NICE_OLED_WIDGET_MODIFIERS_INDICATORS_LUNA=n
+```
+
+You can enable only the capslock if it is more appropriate for you:
+```conf
+CONFIG_NICE_OLED_WIDGET_HID_INDICATORS_LUNA_ONLY_CAPSLOCK=y
+```
+
+</details>
+
+----
+
+## (old) Contents
+
+<details>
 
 
 - [INTRO](#INTRO)
@@ -30,53 +98,15 @@ If you want to customize this image with shapes/colors/etc. You can see these re
 - [RELATED PROJECTS](#RELATED-PROJECTS)
 - [DONGLE DESIGNS](#DONGLE-DESIGNS)
 
-----
+</details>
 
-- If you already have your corne - sofle - lily58 configured with this repository and want to make
-a modification to your keymap, you can do it with the online [ZMK-STUDIO](https://zmk.studio/).
 
-- If you already have your corne - sofle - lily58 configured with this repository and want to make
-a modification to your keymap, you can do it with the online [keymap-editor](https://nickcoutsos.github.io/keymap-editor/).
 
-- If you already have a repository and you want only the dongle option of this repository with support for `zmk-studio`, just add this repository as a module to your configuration, look the section [THIS REPOSITORY AS A MODULE](#THIS-REPOSITORY-AS-A-MODULE).
 
-# INTRO
+# Install
 
 <details>
 
-Tested with **[puchi_ble_v1]** (used as a dongle and as
-peripherals), **[nice_nano_v2]** (used as a dongle and as peripherals),
-**clones of nice_nano_v2** (used as a dongle and as peripherals), and the
-**[seeeduino_xiao_ble]** (used only as a dongle).
-
-| Main Pros                                                                                       |
-|-------------------------------------------------------------------------------------------------|
-| mobility and flexibility                                                                        |
-| reduction of tension and fatigue (ergonomic and ortholinear)                                    |
-| improved productivity                                                                           |
-| bluetooth and usb-c connection                                                                  |
-| Highly customizable programmable with [ZMK firmware].                                           |
-| compatibility with linux, windows, macos, android, ios and more                                 |
-| completely wireless between the two halves and with the PC                                      |
-| ultra-low consumption. extends battery life to the limit                                        |
-| drag and drop thanks to the included uf2 bootloader                                             |
-| no additional software required for flashing                                                    |
-| support for multiple devices (up to 5)                                                          |
-| mouse keys                                                                                      |
-| rgb                                                                                             |
-| macros                                                                                          |
-| tap dance                                                                                       |
-| combos                                                                                          |
-| up to 1 week of use without charger (with 100mah)                                               |
-| support [nice-view] screen and oled screen                                                      |
-| online editor for keymap. see               [keymap-editor]                                     |
-| 100% open source                                                                                |
-| support for puchi-ble dongle, nice!nano v2, nice!nano v2 clones, seeeduino xiao ble and more... |
-| support with dongle with display 128x32, 128x64 and 128x128                                     |
-| and more...                                                                                     |
-</details>
-
-# QUICK START
 > [!NOTE]
 >
 > 1. With this configuration you can use the corne - sofle - lily58 keyboard practically
@@ -135,17 +165,12 @@ Here you can see the visual changes to the configuration:
 > [config](./config/config_keymap-drawer.yaml).
 > The file for the workflows is in [workflows](./.github/workflows/keymap-drawer.yaml) in case you want to modify it.
 
-## keymap sofle
-<details>
+### keymap sofle
 	
 ![current-keymap-sofle](keymap-drawer/sofle.svg)
 	
 If you want to customize this image with shapes/colors/etc. You can see these references:
 [^1] [^2] [^3]
-</details>
-
-
-
 
 
 #  LOCAL INSTALLATION 
@@ -235,12 +260,12 @@ make corne_urob # compile all the *.uf2 of the corne and copy them to the firmwa
 ```
 </details>
 
+</details>
+
 
 # DISPLAY
 1. ePAPER
-   - The nice!view is a SSD1306 OLED replacement boasting >1,000x power savings
-     while keeping a 30Hz refresh rate. It has a similar pinout to SSD1306
-     OLEDs with one extra pin making it easy to add on to existing boards.
+   - The nice!view is a SSD1306 OLED replacement
    - the [nice-view] screen is compiled by default in this repository.
 2. OLED
    - SSD1306 / sh1107 / sh1106 OLED displays are one of the most common in
@@ -254,6 +279,9 @@ make corne_urob # compile all the *.uf2 of the corne and copy them to the firmwa
    - If you want to enable the OLED screen for the halves, you can do so by
      modifying the `.conf` files for their respective halves.
    - Remember to disable the [nice-view] screens to avoid conflict in the compilation.
+  
+<details>
+	
 3. FULL COLOR LCD SCREEN
    - [Prospector](https://github.com/carrefinho/prospector) is a desktop ZMK dongle with full color LCD screen.
 
@@ -306,11 +334,9 @@ You just have to modify the following line:
 
 ```
 
+</details>
+
 # RGB
-> [!WARNING]
->
-> 1. If you use [nice-view] you cannot use rgb, since [nice-view] uses the same
->    pinout as rgb.
 
 If you are interested in using RGB on your keyboard you can see the
 configuration in the branch
@@ -320,84 +346,6 @@ from this same repository.
 Here is an example of what it looks like:
 [![rgb-demo](src/demo.GIF)](https://www.youtube.com/c/mctechnology17)
 
-## rgb with niceview
-Points to take into account if you want to use niceview with RGB:
-- In a nutshell, the problem is that the backlight and the nice!view display
-  use the same pin on the pcb, causing conflicts.
-- The common solution is to solder the backlight to pin 008 and set it to the keymap.
-- However, this means that both the screen and backlight share the same power
-  source, which can drain the battery quickly.
-- There is no ideal solution, but some options include redesigning the boards
-  to separate the power or powering the display directly from a gpio pin.
-
-## rgb with niceview in two step
-1. solder the nice!view display to pin 008
-2. set the display to use pin 008 in the keymap
-3. recompile the firmware and enjoy the nice!view display with RGB
-```c
-&nice_view_spi {
-    cs-gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>;  // use D0 (008) for CS (no 006)
-};
-```
-
-# DONGLE
-> [!TIP]
->
-> 1. You can connect the display to the dongle directly to the i2c port of the
-> handwired style dongle, or you can connect it to a usb-c port of the pcb
-> style dongle.
-> 2. You can see the connections in the following diagram for [seeeduino_xiao_ble](./src/pinout-seeeduino_xiao_ble.png) and for the boards with [pro_micro](./src/pinout-pro_micro.png) connections as the [nice_nano_v2] and the [puchi_ble_v1].
-> 3. You can print a case for the dongle, you can see the designs below in the section [Dongle Designs](#Dongle-Designs).
-> 4. You can print a pcb for the dongle, you can see the designs in the section [Dongle Designs](#Dongle-Designs).
-> 5. You can program a macro that references the `&bootloader` action so that the dongle enters bootloader mode and you can flash the firmware again. The macros are executed on the master so this action causes the dongle to enter bootloader mode. Thanks @chadtrans for the tip!
-
-In the following image you can see how you can connect the OLED screen to the
-dongle:
-[![dongle-demo](src/dongle.jpg)](https://www.youtube.com/c/mctechnology17)
-
-Information about this image:
-- The photo shows a [seeeduino_xiao_ble] dongle with an OLED 128x128 sh1107 display connected to the handwired style i2c port. This dongle acts as master.
-- The left side acts as peripheral in this case, the board is a [puchi_ble_v1].
-- The right side acts as a peripheral in this case, the board is a [nice_nano_v2].
-- The photo shows a clone [nice_nano_v2] dongle with an OLED display connected to a traditional i2c port in a pcb style. This dongle is only for sample photo and is not connected to any device shown in the photo.
-
-Combo example to enter bootloader mode. On  your
-[corne.keymap](./config/corne.keymap) file you can add the following combo (Thanks @VictorSCamargo for the tip!):
-> [!TIP]
->
-> 1. You can program this `combo` with the online editor [keymap-editor]
-> 2. These examples were tested using a `corne` keyboard, so the numbers `0 1 2` correspond to the keys on the left of the first row of the keyboard and the numbers `9 10 11` correspond to the 3 right keys at the top of columns 3, 4 and 5. see the reference below `COMBO` for more details.
-> 3. You can combine both forms of combos and in both cases the keyboard that is the master (dongle or central) is the one that executes the action, in this case the dongle or the left master enters bootloader mode.
-
-1. This is the manual way to do it using `c` code:
-
-```c
-// this is the manual way to do it
-#define COMBO(NAME, BINDINGS, KEYPOS, LAYERS) \
-    combo_##NAME { \
-        bindings = <BINDINGS>; \
-        key-positions = <KEYPOS>; \
-        layers = <LAYERS>; \
-    };
-// for the right side
-// COMBO NAME = combo_bootloader_right,
-// BINDINGS = &bootloader,
-// KEYPOSITION = 9 10 11,
-// LAYERS = 0
-COMBO(combo_bootloader_right,        &bootloader,     9 10 11,           0);
-```
-
-2. This is the manual way to do it using `dts` code:
-
-```dts
-// for the left side
-combo_bootloader_left {
-        timeout-ms = <50>;
-        key-positions = <0 1 2>; // Pressing the 3 first keys on the keyboard will trigger &bootloader
-        bindings = <&bootloader>;
-        };
-   };
-```
 
 # USEFUL TIPS
 > [!TIP]
@@ -405,16 +353,18 @@ combo_bootloader_left {
 > Below are some useful tips for using your corne - sofle - lily58 keyboard with this
 > configuration.
 
-- You can add a reset key on each half, that's useful for when your halves disconnect/desynchronize, or something unusual happens. That way the firmware is loaded again. see reference in [corne.keymap](./config/corne.keymap)
-- You can add a bootloader activator on each half in case you don't have access to the bootloader button, it is useful in case your case is not optimized or you just want that option. see reference in [corne.keymap](./config/corne.keymap)
+
 - If both halves were disconnected/unsynchronized, you just have to press the reset button on both halves 10 times in a row and they will reconnect.
-- If you want to flash the firmware again you just have to connect the keyboard (that is, one half first, usually the left one) press the reset button 2 times in a row
-  and your device is recognized as a hard disk storage drive, then just drag the file to flash and that's it. do the same with the other half.
+- If you want to flash the firmware again you just have to connect the keyboard (that is, one half first, usually the left one) press the reset button 2 times in a row and your device is recognized as a hard disk storage drive, then just drag the file to flash and that's it. do the same with the other half.
 - Remember that if your corne - sofle - lily58 only has some functional RGB lights you can activate only the ones that you have functional, it is not necessary to activate all the lights. see reference in [led strip](./config/corne.keymap)
-- You can combine the boards, for example: on the left you can have a [nice_nano_v2], on the right a [puchi_ble_v1] and on the dongle a [seeeduino_xiao_ble] or some clone [nice_nano_v2], or any combination you can think of.
+- ~You can add a reset key on each half, that's useful for when your halves disconnect/desynchronize, or something unusual happens. That way the firmware is loaded again. see reference in [corne.keymap](./config/corne.keymap)~
+- ~You can add a bootloader activator on each half in case you don't have access to the bootloader button, it is useful in case your case is not optimized or you just want that option. see reference in [corne.keymap](./config/corne.keymap)~
+- ~You can combine the boards, for example: on the left you can have a [nice_nano_v2], on the right a [puchi_ble_v1] and on the dongle a [seeeduino_xiao_ble] or some clone [nice_nano_v2], or any combination you can think of.~
 
 # ZMK STUDIO
 
+<details>
+	
 This repository includes the necessary configuration to use zmk-studio without
 the need to configure anything else. You just have to follow the steps below:
 - fork this repository y flash the firmware to the keyboard with the uf2 files
@@ -452,7 +402,12 @@ Issue](https://github.com/zmkfirmware/zmk-studio/issues/new/choose). With any
 bugs or testing results, please include all the relevant details, including the
 host OS, app/browser details, keyboard used, link to your config repo, etc.
 
-# MODULE INTEGRATION
+</details>
+
+# MODULES USED and RECS
+
+<details> 
+
 > [!TIP]
 >
 > 1. Remember that animations consume energy, so if you want to conserve your battery, turn off the animations!
@@ -462,9 +417,13 @@ host OS, app/browser details, keyboard used, link to your config repo, etc.
 See module details here for more information and more configurations:
 - [**nice_view_gem**](https://github.com/M165437/nice-view-gem) a sleek customization for the nice!view shield
 - [**nice_oled**](https://github.com/mctechnology17/zmk-nice-oled) vertical widgets for oled screens with zmk for split and non-split keyboards using the standard [oled screen](https://keycapsss.com/keyboard-parts/parts/80/0.91-oled-lcd-display-128x32-ssd1306-i2c) 128x32.
+
+<details>
+	
 - [**zmk-dongle-display**](https://github.com/englmaxi/zmk-dongle-display) to show the peripheral battery percentage (and more!) on the display of the dongle.
 - [**dongle_display!view**](https://github.com/mctechnology17/zmk-dongle-display-view) to show the peripheral battery percentage (and more!) on the display of the dongle using the nice!view display.
 - [**oled Adapter**](https://github.com/mctechnology17/zmk-oled-adapter) to use the 128x32, 128x64 and 128x128 OLED screens on keyboards with ZMK without having to modify the shields of the keyboards.
+
 
 ## list of useful modules
 Additional features are provided by the following [modules](https://zmk.dev/docs/features/modules):
@@ -519,6 +478,10 @@ include:
 
 3. Build the firmware, flash it to your keyboard, and enjoy!
 
+</details>
+
+<details>
+	
 # INSPIRATIONS
 
 - [englmaxi/zmk-config](https://github.com/englmaxi/zmk-config)
@@ -592,6 +555,9 @@ An example of Dongle Designs (by @rain2813):
 [^3]: Install pipx, https://pipx.pypa.io/stable/
 [^4]: Urob zmk-config, https://github.com/urob/zmk-config
 [^5]: Urob ZMK Firmware: Personal fork, https://github.com/urob/zmk/
+
+</details>
+
 
 [qmk-config]: https://github.com/mctechnology17/qmk-config
 [qmk_userspace]: https://github.com/mctechnology17/qmk_userspace
