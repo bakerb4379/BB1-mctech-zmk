@@ -5,7 +5,10 @@
 
 
 ### Current layout (Sofle RGB): 
-<details> (updates automatically)
+<details>
+	
+<sub>(updates automatically)</sub>
+
 	
 ![current-keymap-sofle](keymap-drawer/sofle.svg)
 	
@@ -15,6 +18,7 @@ If you want to customize this image with shapes/colors/etc. You can see these re
 
 ----
 
+(old) Contents
 
 <details>
 
