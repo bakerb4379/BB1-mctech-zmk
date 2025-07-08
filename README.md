@@ -4,7 +4,7 @@
 - [**nice_oled**](https://github.com/mctechnology17/zmk-nice-oled) repo
 
 
-### Current layout (Sofle RGB): 
+### CURRENT KEYMAP (Sofle RGB): 
 <details>
 	
 <sub>(updates automatically)</sub>
@@ -18,7 +18,7 @@ If you want to customize this image with shapes/colors/etc. You can see these re
 
 
 
-### OLED SETTINGS (add to sofle.conf)
+### OLED SETTINGS (add to [sofle.conf](config/sofle.conf))
 
 <details> 
 
