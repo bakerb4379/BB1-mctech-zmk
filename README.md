@@ -1,5 +1,5 @@
 
-- [ZMK-STUDIO](https://zmk.studio/).\
+- [ZMK-STUDIO](https://zmk.studio/).
 - [keymap-editor](https://nickcoutsos.github.io/keymap-editor/).
 - [**nice_oled**](https://github.com/mctechnology17/zmk-nice-oled) repo
 
