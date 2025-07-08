@@ -1,8 +1,13 @@
+### quick links
 
 - [ZMK-STUDIO](https://zmk.studio/).
 - [keymap-editor](https://nickcoutsos.github.io/keymap-editor/).
 - [**nice_oled**](https://github.com/mctechnology17/zmk-nice-oled) repo
 
+### to do 
+
+- https://zmk.dev/docs/features/lighting
+- led_strip function??
 
 ### CURRENT KEYMAP (Sofle RGB): 
 <details>
