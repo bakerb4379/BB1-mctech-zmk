@@ -69,10 +69,13 @@ Hardware:
   - proper standoff height
  
 Firmware: 
+- reset HID to use mouse fxns over BLE
 - edit out unused modules > root/config/west.yml
 - edit cmake args? > root/build.yaml
 - [ ] rename artifacts output > root/build.yaml ... will this break anything?
-- [ ] monitor windows battery read  
+- [ ] monitor windows battery read
+- [ ] what is cmake-args? > build.yaml
+- [ ] what is snippets? > build.yaml
 
 
 <!---------------break---------------->
