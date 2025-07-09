@@ -18,9 +18,7 @@
 # #include <dt-bindings/zmk/outputs.h>
 */
 
-&led_strip {
-    chain-length = <6>;
-};
+&led_strip { chain-length = <6>; };
 
 / {
     keymap {
@@ -81,11 +79,11 @@
             //              |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&bt BT_CLR        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans         &trans    &trans    &trans     &trans   &trans
-&ext_power EP_ON  &kp INS       &kp PSCRN     &kp K_CMENU   &trans        &trans                          &kp PG_UP      &trans    &kp UP    &trans     &kp N0   &trans
-&rgb_ug RGB_ON    &kp LALT      &kp LCTRL     &kp LSHFT     &trans        &kp CLCK                        &kp PAGE_DOWN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp DEL  &kp BSPC
-&bl BL_ON         &kp K_UNDO    &kp K_CUT     &kp K_COPY    &kp K_PASTE   &trans        &trans    &trans  &trans         &trans    &trans    &trans     &trans   &trans
-                                &trans        &trans        &trans        &trans        &trans    &trans  &trans         &trans    &trans    &trans
+&bt BT_CLR        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_COLOR_HSB(99,100,50)  &trans     &trans   &soft_off
+&ext_power EP_ON  &kp INS       &kp PSCRN     &kp K_CMENU   &trans        &trans                          &kp PG_UP        &trans           &kp UP                            &trans     &kp N0   &trans
+&rgb_ug RGB_ON    &kp LALT      &kp LCTRL     &kp LSHFT     &trans        &kp CLCK                        &kp PAGE_DOWN    &kp LEFT         &kp DOWN                          &kp RIGHT  &kp DEL  &kp BSPC
+&bl BL_ON         &kp K_UNDO    &kp K_CUT     &kp K_COPY    &kp K_PASTE   &trans        &trans    &trans  &trans           &trans           &trans                            &trans     &trans   &trans
+                                &trans        &trans        &trans        &trans        &trans    &trans  &trans           &trans           &trans                            &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
