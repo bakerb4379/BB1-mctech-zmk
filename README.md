@@ -68,10 +68,10 @@ Hardware:
 - thinner batts 
   - proper standoff height
  
-Firmware: task
+Firmware: 
 - edit out unused modules > root/config/west.yml
 - edit cmake args? > root/build.yaml
-[ ] 
+[ ] rename artifacts output > root/build.yaml ... will this break anything? 
 
 
 <!---------------break---------------->
