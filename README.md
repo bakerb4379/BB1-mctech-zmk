@@ -49,10 +49,14 @@ RGB:
    - properly define led_strip function within [n!n.overlay](boards\nice_nano_v2.overlay) 
    - edit [n!n.overlay](boards\nice_nano_v2.overlay) RGB pin? currently set to p0.06, which is the battery GND?
      - ``` psels = <NRF_PSEL(SPIM_MOSI, 0, 6)>; ```
-
 2. Configure RGB underglow settings 
    - see ZMK [doc](https://zmk.dev/docs/config/lighting#rgb-underglow)
    - disable nice-view compile (inside n!n.overlay?)
+   - 
+3. RGB behavior activation + binding
+   - #include <dt-bindings/zmk/rgb.h>
+   - need this to enable "RGB_TOG" etc.
+   - https://zmk.dev/docs/keymaps/behaviors/underglow
 
 OLED:  
 - custom animation? 
