@@ -1,16 +1,25 @@
 # Custom ZMK repo for Sofle RGB + n!n2
 
-<details> 
+**Quick links:**
 
+- [ZMK-STUDIO](https://zmk.studio/).
+- [keymap-editor](https://nickcoutsos.github.io/keymap-editor/).
+- [**nice_oled**](https://github.com/mctechnology17/zmk-nice-oled) repo
+
+<!---------------break---------------->
+
+<details>
+	<summary> <ins> My hardware/software </ins> </summary>
+<br>
+	
 hardware: 
 
-- Sofle RGB (v2.1) 
+- Sofle RGB (v2.1)
 - nice!nano v2 (Nordic nRF52840)
 - [ec11 rotary encoders](https://customkbd.com/collections/other-components/products/rotary-encoder-ec11)
 - 128X32 OLED display
 - external LiPo batts per side
-- 6x RGB underglow LEDs  ... WS2812 family? 
-
+- 6x RGB underglow LEDs  ... WS2812 family?
 - [vendor](https://customkbd.com/collections/sofle/products/sofle-keyboard-rgb-assembled)
 
 
@@ -26,36 +35,31 @@ software
 
 <!---------------break---------------->
 
-### quick links
 
-- [ZMK-STUDIO](https://zmk.studio/).
-- [keymap-editor](https://nickcoutsos.github.io/keymap-editor/).
-- [**nice_oled**](https://github.com/mctechnology17/zmk-nice-oled) repo
 
-<!---------------break---------------->
-
-### to do 
+### TO DO
 
 <details>
+<summary>**TO DO**</summary>
+<br>
 
-RBG
-
+RGB:
 1. Add RGB underglow support 
-- see ZMK [doc](https://zmk.dev/docs/development/hardware-integration/lighting/underglow#nrf52-based-boards)
-- properly define led_strip function within [n!n.overlay](boards\nice_nano_v2.overlay) 
-- edit [n!n.overlay](boards\nice_nano_v2.overlay) RGB pin? currently set to p0.06, which is the battery GND?
-- ``` psels = <NRF_PSEL(SPIM_MOSI, 0, 6)>; ```
+   - see ZMK [doc](https://zmk.dev/docs/development/hardware-integration/lighting/underglow#nrf52-based-boards)
+   - properly define led_strip function within [n!n.overlay](boards\nice_nano_v2.overlay) 
+   - edit [n!n.overlay](boards\nice_nano_v2.overlay) RGB pin? currently set to p0.06, which is the battery GND?
+     - ``` psels = <NRF_PSEL(SPIM_MOSI, 0, 6)>; ```
 
 2. Configure RGB underglow settings 
-- see ZMK [doc](https://zmk.dev/docs/config/lighting#rgb-underglow)
-- disable nice-view compile (inside n!n.overlay?)
+   - see ZMK [doc](https://zmk.dev/docs/config/lighting#rgb-underglow)
+   - disable nice-view compile (inside n!n.overlay?)
 
-OLED 
+OLED:  
 - custom animation? 
 - increase gem fps (9600 = 10fps > 9600/10 *24 = 3840 == 24fps??)
 - resize pokemon animation?
 
-Hardware
+Hardware: 
 - acrylic OLED covers? 
   - standoffs 
   - m2 (torx) screws
@@ -63,6 +67,12 @@ Hardware
 - figure out LED hardware (sk6812mini? ws2912b? [...](https://customkbd.com/collections/diodes-and-leds)) 
 - thinner batts 
   - proper standoff height
+ 
+Firmware: task
+- edit out unused modules > root/config/west.yml
+- edit cmake args? > root/build.yaml
+[ ] 
+
 
 <!---------------break---------------->
 
