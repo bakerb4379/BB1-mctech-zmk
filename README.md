@@ -71,7 +71,8 @@ Hardware:
 Firmware: 
 - edit out unused modules > root/config/west.yml
 - edit cmake args? > root/build.yaml
-- [ ] rename artifacts output > root/build.yaml ... will this break anything? 
+- [ ] rename artifacts output > root/build.yaml ... will this break anything?
+- [ ] monitor windows battery read  
 
 
 <!---------------break---------------->
