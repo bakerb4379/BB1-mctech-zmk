@@ -43,6 +43,13 @@ software
 <summary>**TO DO**</summary>
 <br>
 
+battery shits?:
+- find ideal thin battery ~5000mAh+
+- maybe 2s battery?? (2x parallel series)
+- https://zmk.dev/docs/development/hardware-integration/battery
+  - https://github.com/ebastler/zmk-designguide/blob/main/readme.md#vsense
+
+
 RGB:
 1. Add RGB underglow support 
    - see ZMK [doc](https://zmk.dev/docs/development/hardware-integration/lighting/underglow#nrf52-based-boards)
