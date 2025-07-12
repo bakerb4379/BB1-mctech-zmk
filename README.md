@@ -51,6 +51,8 @@ battery shits?:
 - vendors?
   - https://www.lipobattery.us/li-po-batteries-5000mah/
   - https://www.dnkpower.com/3-7v-lipo-battery-cell/
+  - https://www.benzoenergy.com/lithium-polymer-battery.html
+  - https://motoma.com/lithium-ion-battery/
 
 
 
