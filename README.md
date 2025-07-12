@@ -48,6 +48,10 @@ battery shits?:
 - maybe 2s battery?? (2x parallel series)
 - https://zmk.dev/docs/development/hardware-integration/battery
   - https://github.com/ebastler/zmk-designguide/blob/main/readme.md#vsense
+- vendors?
+  - https://www.lipobattery.us/li-po-batteries-5000mah/
+  - https://www.dnkpower.com/3-7v-lipo-battery-cell/
+
 
 
 RGB:
