@@ -22,6 +22,7 @@ hardware:
 - 6x RGB underglow LEDs  ... WS2812 family?
 - [vendor](https://customkbd.com/collections/sofle/products/sofle-keyboard-rgb-assembled)
 
+- lame, v1.0 https://github.com/braindefender/KLP-Lame-Keycaps
 
 
 software
