@@ -40,9 +40,19 @@ software
 
 ### TO DO
 
-<details>
+<details open>
 <summary>**TO DO**</summary>
 <br>
+
+REPLACE (left) n!n... :/
+- control side does not charge.. likely fried the charging circuit when hot-plugging TRRS
+- upgrade to different board??
+  - RESEARCH: https://github.com/joric/nrfmicro/wiki/Alternatives#supermini-nrf52840
+1. choose replacement board
+2. solder headers? or buy preinstalled
+3. solder JST lead... again
+4. re-flash firmware
+
 
 battery shits?:
 - find ideal thin battery ~5000mAh+
@@ -58,7 +68,7 @@ battery shits?:
 
 
 RGB:
-1. Add RGB underglow support 
+- [ ] 1. Add RGB underglow support 
    - see ZMK [doc](https://zmk.dev/docs/development/hardware-integration/lighting/underglow#nrf52-based-boards)
    - properly define led_strip function within [n!n.overlay](boards\nice_nano_v2.overlay) 
    - edit [n!n.overlay](boards\nice_nano_v2.overlay) RGB pin? currently set to p0.06, which is the battery GND?
