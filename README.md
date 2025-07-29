@@ -41,7 +41,7 @@ software
 ## TO DO
 
 
-### REPLACE (left) n!n... :/
+### 1. REPLACE (left) n!n... :/
 - control side does not charge.. likely fried the charging circuit when hot-plugging TRRS
 - upgrade to different board??
   - RESEARCH: https://github.com/joric/nrfmicro/wiki/Alternatives#supermini-nrf52840
@@ -51,7 +51,7 @@ software
    4. install power switch! (see below)
 5. re-flash firmware
 
-### POWER SWITCH
+### 2. POWER SWITCHES
 - install power switches in-line (red/pos wire)
 - install on board side... [board]--[switch]--[jst-jst]--[batt] 
 
