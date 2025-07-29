@@ -49,7 +49,7 @@ software
 1. choose replacement board
    - Pro-Micro drop-in replacement
    - [Mikoto](https://github.com/joric/nrfmicro/wiki/Alternatives#mikoto) is [ok](https://www.reddit.com/r/ErgoMechKeyboards/comments/1gqo8ye/comment/lxmodnv/)? https://keebd.com/en-us/products/mikoto-controller
-   - 
+   - Puchi has on-board power switch! https://keycapsss.com/Puchi-BLE-Wireless-Microcontroller-Pro-Micro-replacement/KC10157-SWITCH
 3. solder headers? or buy preinstalled
    - RESEARCH: spring headers??? 
 4. solder JST lead... again
