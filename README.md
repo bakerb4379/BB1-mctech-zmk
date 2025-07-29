@@ -45,15 +45,21 @@ software
 - control side does not charge.. likely fried the charging circuit when hot-plugging TRRS
 - upgrade to different board??
   - RESEARCH: https://github.com/joric/nrfmicro/wiki/Alternatives#supermini-nrf52840
+  - https://zmk.dev/docs/hardware#composite
 1. choose replacement board
-2. solder headers? or buy preinstalled
-3. solder JST lead... again
-   4. install power switch! (see below)
+   - Pro-Micro drop-in replacement
+   - [Mikoto](https://github.com/joric/nrfmicro/wiki/Alternatives#mikoto) is [ok](https://www.reddit.com/r/ErgoMechKeyboards/comments/1gqo8ye/comment/lxmodnv/)? https://keebd.com/en-us/products/mikoto-controller
+   - 
+3. solder headers? or buy preinstalled
+   - RESEARCH: spring headers??? 
+4. solder JST lead... again
+   - install power switch! (see below)
 5. re-flash firmware
 
 ### 2. POWER SWITCHES
 - install power switches in-line (red/pos wire)
-- install on board side... [board]--[switch]--[jst-jst]--[batt] 
+- install on board side... [board]--[switch]--[jst-jst]--[batt]
+- OR INSTALL "BATTERY HELPER" https://boardsource.xyz/products/battery-helper
 
 <!---------------break---------------->
 
