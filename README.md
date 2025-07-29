@@ -40,9 +40,6 @@ software
 
 ## TO DO
 
-<details open>
-<summary>**TO DO**</summary>
-<br>
 
 ### REPLACE (left) n!n... :/
 - control side does not charge.. likely fried the charging circuit when hot-plugging TRRS
@@ -58,7 +55,13 @@ software
 - install power switches in-line (red/pos wire)
 - install on board side... [board]--[switch]--[jst-jst]--[batt] 
 
-battery shits?:
+<!---------------break---------------->
+
+<details>
+<summary> [add'tl TO DO!!] </summary>
+<br>
+
+### battery shits?:
 - find ideal thin battery ~5000mAh+
 - maybe 2s battery?? (2x parallel series)
 - https://zmk.dev/docs/development/hardware-integration/battery
@@ -70,8 +73,7 @@ battery shits?:
   - https://motoma.com/lithium-ion-battery/
 
 
-
-RGB:
+### RGB:
 - [x] ~~1. Add RGB underglow support~~
    - ~~see ZMK [doc](https://zmk.dev/docs/development/hardware-integration/lighting/underglow#nrf52-based-boards)~~
    - ~~properly define led_strip function within [n!n.overlay](boards\nice_nano_v2.overlay)~~ 
@@ -86,12 +88,12 @@ RGB:
    - [x] need this to enable "RGB_TOG" etc.
    - https://zmk.dev/docs/keymaps/behaviors/underglow
 
-OLED:  
+### OLED:  
 - custom animation? 
 - increase gem fps (9600 = 10fps > 9600/10 *24 = 3840 == 24fps??)
 - resize pokemon animation?
 
-Hardware: 
+### Hardware: 
 - acrylic OLED covers? 
   - standoffs 
   - m2 (torx) screws
@@ -100,7 +102,7 @@ Hardware:
 - thinner batts 
   - proper standoff height
  
-Firmware: 
+### Firmware: 
 - reset HID to use mouse fxns over BLE
 - edit out unused modules > root/config/west.yml
 - edit cmake args? > root/build.yaml
