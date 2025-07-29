@@ -111,12 +111,13 @@ software
 - [ ] what is cmake-args? > build.yaml
 - [ ] what is snippets? > build.yaml
 
+</details>
 
 <!---------------break---------------->
 
-</details>
 
-### CURRENT KEYMAP (Sofle RGB): 
+
+## CURRENT KEYMAP (Sofle RGB): 
 <details>
 	
 <sub>(updates automatically)</sub>
@@ -131,7 +132,7 @@ To customize, see these references:
 <!---------------break---------------->
 
 
-### OLED SETTINGS (add to [sofle.conf](config/sofle.conf)? n!n.overlay?? unsure)
+## OLED SETTINGS (add to [sofle.conf](config/sofle.conf)? n!n.overlay?? unsure)
 
 <details> 
 
