@@ -60,6 +60,7 @@ software
 - install power switches in-line (red/pos wire)
 - install on board side... [board]--[switch]--[jst-jst]--[batt]
 - OR INSTALL "BATTERY HELPER" https://boardsource.xyz/products/battery-helper
+- OR use Puchi-BLE with built-in power switches
 
 <!---------------break---------------->
 
@@ -68,6 +69,8 @@ software
 <br>
 
 ### battery shits?:
+- alternative batt wiring? desolder TRRS, then use those pads to power/battery? https://www.reddit.com/r/ErgoMechKeyboards/comments/10kdk9p/recharging_nicenano_battery_on_raw_and_gnd_pins/
+
 - find ideal thin battery ~5000mAh+
 - maybe 2s battery?? (2x parallel series)
 - https://zmk.dev/docs/development/hardware-integration/battery
