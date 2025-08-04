@@ -73,8 +73,19 @@ software
 
 ### alternative wiring (TRRS pads, etc.) 
 - https://www.reddit.com/r/ErgoMechKeyboards/comments/rb856x/comment/hnr10pa/
+- https://github.com/foostan/crkbd/issues/149#issuecomment-1159368091
+
+
+
+
   
 <!---------------break---------------->
+
+
+
+
+
+
 
 <details>
 <summary> [add'tl TO DO!!] </summary>
