@@ -70,6 +70,7 @@ software
   
 ### SOLAR CHARGING?!?!?!?!?!
 - solder solar cells onto the same usb-c pins as above?
+- connect solar cell to powerswitch-OFF ... so that OFF=solar+battery, and ON=usb+battery. solar cells will only charge the batt when board is OFF, thus trickle charge and no explosion  
 
 ### alternative wiring (TRRS pads, etc.) 
 - https://www.reddit.com/r/ErgoMechKeyboards/comments/rb856x/comment/hnr10pa/
