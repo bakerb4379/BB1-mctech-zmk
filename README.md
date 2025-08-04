@@ -82,7 +82,7 @@ software
 - alternative batt wiring? desolder TRRS, then use those pads to power/battery? https://www.reddit.com/r/ErgoMechKeyboards/comments/10kdk9p/recharging_nicenano_battery_on_raw_and_gnd_pins/
 
 - find ideal thin battery ~5000mAh+
-- maybe 2s battery?? (2x parallel series)
+- maybe 2s battery?? (2x parallel series) https://i.imgur.com/N0lpFeY.jpeg
 - https://zmk.dev/docs/development/hardware-integration/battery
   - https://github.com/ebastler/zmk-designguide/blob/main/readme.md#vsense
 - vendors?
