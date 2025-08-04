@@ -71,6 +71,8 @@ software
 ### SOLAR CHARGING?!?!?!?!?!
 - solder solar cells onto the same usb-c pins as above?
 
+### alternative wiring (TRRS pads, etc.) 
+- https://www.reddit.com/r/ErgoMechKeyboards/comments/rb856x/comment/hnr10pa/
   
 <!---------------break---------------->
 
