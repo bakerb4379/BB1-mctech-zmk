@@ -66,6 +66,11 @@ software
 - Linut tech tips overview https://www.youtube.com/watch?v=4y-qF7Ga_W0
 - https://www.reddit.com/r/ErgoMechKeyboards/comments/1b4dfui/comment/ksyxj8u/
 
+  
+### SOLAR CHARGING?!?!?!?!?!
+- solder solar cells onto the same usb-c pins as above?
+
+  
 <!---------------break---------------->
 
 <details>
