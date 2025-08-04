@@ -64,6 +64,7 @@ software
 
 ### WIRELESS CHARGING? 
 - Linut tech tips overview https://www.youtube.com/watch?v=4y-qF7Ga_W0
+- solder in-line with usb-c pins? https://linustechtips.com/topic/1487598-every-wireless-keyboard-is-a-liar%E2%80%A6-but-the-fix-costs-2/page/4/#comment-16432425
 - https://www.reddit.com/r/ErgoMechKeyboards/comments/1b4dfui/comment/ksyxj8u/
 
   
