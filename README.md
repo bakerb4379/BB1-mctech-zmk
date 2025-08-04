@@ -60,7 +60,11 @@ software
 - install power switches in-line (red/pos wire)
 - install on board side... [board]--[switch]--[jst-jst]--[batt]
 - OR INSTALL "BATTERY HELPER" https://boardsource.xyz/products/battery-helper
-- OR use Puchi-BLE with built-in power switches
+- OR use [Puchi-BLE](https://github.com/joric/nrfmicro/wiki/Alternatives#puchi-ble) with built-in power switches
+
+### WIRELESS CHARGING? 
+- Linut tech tips overview https://www.youtube.com/watch?v=4y-qF7Ga_W0
+- https://www.reddit.com/r/ErgoMechKeyboards/comments/1b4dfui/comment/ksyxj8u/
 
 <!---------------break---------------->
 
